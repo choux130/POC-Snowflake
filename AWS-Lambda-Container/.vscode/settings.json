@@ -1,0 +1,4 @@
+{
+    "python.testing.cwd": "${workspaceFolder}/code",
+    "python.testing.pytestEnabled": true
+}
