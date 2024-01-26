@@ -1,1 +1,4 @@
 .DS_Store
+*_accessKeys.csv
+*.p8
+*.pub

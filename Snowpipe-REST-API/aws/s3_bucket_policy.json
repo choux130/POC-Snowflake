@@ -1,0 +1,25 @@
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1415115909153",
+    "Statement": [
+        {
+            "Sid": "Access-to-specific-VPC-only",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::us-east-1-snowflake-stage",
+                "arn:aws:s3:::us-east-1-snowflake-stage/*"
+            ],
+            "Condition": {
+                "ForAllValues:StringNotEquals": {
+                    "aws:SourceVpc": [
+                        "vpc-0033566bc71d01169",
+                        "vpc-bc3402c6"
+                    ],
+                    "aws:userid": "843562674612"
+                }
+            }
+        }
+    ]
+}
