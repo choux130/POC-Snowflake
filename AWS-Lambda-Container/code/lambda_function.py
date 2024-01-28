@@ -21,7 +21,7 @@ def handler(event, context):
 
     response = {
         'StatusCode': status_code,
-        'Response': f'Input: {input} --> Output: {output}'
+        'Response': f'Input: {input} ---> AddTen() --> Output: {output} '
     }
 
     return json.dumps(response)
